@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
         lblMain.text = containerViewController?.secondViewController.lblSecond.text
         containerViewController?.updateView()
     }
-    @IBAction func buttonTeste(_ sender: Any) {
+    @IBAction func btnCentral(_ sender: Any) {
         if containerViewController?.status == 0{
             lblMain.text = containerViewController?.secondViewController.lblSecond.text
             containerViewController?.status = 1
