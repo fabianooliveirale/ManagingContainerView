@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     var containerViewController: ContainerViewController?
+    
     @IBOutlet weak var lblMain: UILabel!
     
     override func viewDidLoad() {
@@ -29,6 +30,7 @@ class MainViewController: UIViewController {
         lblMain.text = containerViewController?.secondViewController.lblSecond.text
         containerViewController?.updateView()
     }
+    
     @IBAction func btnCentral(_ sender: Any) {
         if containerViewController?.status == 0{
             lblMain.text = containerViewController?.secondViewController.lblSecond.text
@@ -40,10 +42,12 @@ class MainViewController: UIViewController {
         containerViewController?.updateView()
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "masterContainer" {
             let vc = segue.destination as! ContainerViewController
             containerViewController = vc
         }
     }
+    
 }
