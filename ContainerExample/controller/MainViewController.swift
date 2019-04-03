@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     var containerViewController: ContainerViewController?
+    var num = 0
     
     @IBOutlet weak var lblMain: UILabel!
     
@@ -20,26 +21,22 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func btnOne(_ sender: Any) {
-        containerViewController?.status = 0
         lblMain.text = containerViewController?.firstViewController.lblFirst.text
-        containerViewController?.updateView()
+        containerViewController?.updateView(newIndex: 0)
     }
     
     @IBAction func btnTwo(_ sender: Any) {
-        containerViewController?.status = 1
         lblMain.text = containerViewController?.secondViewController.lblSecond.text
-        containerViewController?.updateView()
+        containerViewController?.updateView(newIndex: 1)
     }
     
     @IBAction func btnCentral(_ sender: Any) {
-        if containerViewController?.status == 0{
-            lblMain.text = containerViewController?.secondViewController.lblSecond.text
-            containerViewController?.status = 1
+        if containerViewController?.oldIndex == 0 {
+            self.num = 1
         }else{
-            lblMain.text = containerViewController?.firstViewController.lblFirst.text
-            containerViewController?.status = 0
+            self.num = 0
         }
-        containerViewController?.updateView()
+        containerViewController?.updateView(newIndex: num)
     }
     
     

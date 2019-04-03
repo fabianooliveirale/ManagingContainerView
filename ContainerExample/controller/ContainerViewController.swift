@@ -10,9 +10,9 @@ import UIKit
 
 class ContainerViewController: UIViewController {
     
-    var status: Int = 0
+    var oldIndex: Int = 0
     
-     lazy var firstViewController: FirstViewController = {
+    lazy var firstViewController: FirstViewController = {
         // Load Storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
@@ -25,7 +25,7 @@ class ContainerViewController: UIViewController {
         return viewController
     }()
     
-     lazy var secondViewController: SecondViewController = {
+    lazy var secondViewController: SecondViewController = {
         // Load Storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
@@ -46,21 +46,32 @@ class ContainerViewController: UIViewController {
     }
     
     private func setupView() {
-        updateView()
+        updateView(newIndex: 0)
     }
     
-    func updateView() {
-        if status == 0 {
-            remove(asChildViewController: secondViewController)
-            add(asChildViewController: firstViewController)
-        } else {
+    func updateView(newIndex:Int) {
+        switch oldIndex {
+        case  0:
             remove(asChildViewController: firstViewController)
-            add(asChildViewController: secondViewController)
+        case  1:
+            remove(asChildViewController: secondViewController)
+        default:
+            return
         }
+        
+        switch newIndex {
+        case  0:
+            add(asChildViewController: firstViewController)
+        case  1:
+            add(asChildViewController: secondViewController)
+        default:
+            return
+        }
+        oldIndex = newIndex
     }
     
     @objc func selectionDidChange(_ sender: UISegmentedControl) {
-        updateView()
+        updateView(newIndex: 0)
     }
     
     // MARK: - Helper Methods
@@ -90,7 +101,6 @@ class ContainerViewController: UIViewController {
         // Notify Child View Controller
         viewController.removeFromParent()
     }
-    
     
 }
 
