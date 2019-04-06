@@ -10,41 +10,34 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    var containerViewController: ContainerViewController?
-    var num = 0
+    var masterViewController: MasterViewController?
     
-    @IBOutlet weak var lblMain: UILabel!
+    let FIRSTVIEW: Int = 0
+    let SECONDVIEW: Int = 1
+    
+    @IBOutlet weak var labelMain: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       lblMain.text = containerViewController?.firstViewController.lblFirst.text
+        labelMain.text = masterViewController?.firstViewController.lblFirst.text
+         masterViewController?.refreshView(newIndex: FIRSTVIEW)
     }
     
     @IBAction func btnOne(_ sender: Any) {
-        lblMain.text = containerViewController?.firstViewController.lblFirst.text
-        containerViewController?.updateView(newIndex: 0)
+        labelMain.text = masterViewController?.firstViewController.lblFirst.text
+        masterViewController?.refreshView(newIndex: FIRSTVIEW)
     }
     
     @IBAction func btnTwo(_ sender: Any) {
-        lblMain.text = containerViewController?.secondViewController.lblSecond.text
-        containerViewController?.updateView(newIndex: 1)
+         labelMain.text = masterViewController?.secondViewController.lblSecond.text
+         masterViewController?.refreshView(newIndex: SECONDVIEW)
     }
-    
-    @IBAction func btnCentral(_ sender: Any) {
-        if containerViewController?.oldIndex == 0 {
-            self.num = 1
-        }else{
-            self.num = 0
-        }
-        containerViewController?.updateView(newIndex: num)
-    }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "masterContainer" {
-            let vc = segue.destination as! ContainerViewController
-            containerViewController = vc
+            let vc = segue.destination as! MasterViewController
+            masterViewController = vc
+            masterViewController?.mainViewController = self
         }
     }
-    
 }

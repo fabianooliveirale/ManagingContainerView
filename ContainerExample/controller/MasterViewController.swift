@@ -8,29 +8,39 @@
 
 import UIKit
 
-class ContainerViewController: UIViewController {
+class MasterViewController: UIViewController {
     
-    var oldIndex: Int = 0
+    var mainViewController: MainViewController?
     
-    lazy var firstViewController: FirstViewController = {
+    let FISTVIEW: Int = 0
+    let SECONDVIEW: Int = 1
+    
+    private var oldIndex: Int = 0
+    
+     lazy var firstViewController: FirstViewController = {
         // Load Storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
         // Instantiate View Controller
         var viewController = storyboard.instantiateViewController(withIdentifier: "firstViewController") as! FirstViewController
-        
+        // Injection
+        viewController.masterViewController = self
+    
         // Add View Controller as Child View Controller
         self.add(asChildViewController: viewController)
         
         return viewController
     }()
     
-    lazy var secondViewController: SecondViewController = {
+     lazy var secondViewController: SecondViewController = {
         // Load Storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
         // Instantiate View Controller
         var viewController = storyboard.instantiateViewController(withIdentifier: "secondViewController") as! SecondViewController
+        
+        // Injection
+        viewController.masterViewController = self
         
         // Add View Controller as Child View Controller
         self.add(asChildViewController: viewController)
@@ -42,39 +52,39 @@ class ContainerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
     }
     
-    private func setupView() {
-        updateView(newIndex: 0)
+    func refreshView(newIndex: Int) {
+        removeView(newIndex: newIndex)
     }
     
-    func updateView(newIndex:Int) {
+    private func removeView(newIndex: Int){
         switch oldIndex {
-        case  0:
+        case FISTVIEW:
             remove(asChildViewController: firstViewController)
-        case  1:
+            break
+        case SECONDVIEW:
             remove(asChildViewController: secondViewController)
+            break
         default:
-            return
+            print("Erro")
         }
-        
+        addView(newIndex: newIndex)
+    }
+    
+    private func addView(newIndex: Int){
         switch newIndex {
-        case  0:
+        case FISTVIEW:
             add(asChildViewController: firstViewController)
-        case  1:
+            break
+        case SECONDVIEW:
             add(asChildViewController: secondViewController)
+            break
         default:
-            return
+            print("Erro")
         }
         oldIndex = newIndex
     }
-    
-    @objc func selectionDidChange(_ sender: UISegmentedControl) {
-        updateView(newIndex: 0)
-    }
-    
-    // MARK: - Helper Methods
     
     private func add(asChildViewController viewController: UIViewController) {
         // Add Child View Controller
@@ -101,6 +111,5 @@ class ContainerViewController: UIViewController {
         // Notify Child View Controller
         viewController.removeFromParent()
     }
-    
 }
 
