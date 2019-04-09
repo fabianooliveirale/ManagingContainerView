@@ -17,7 +17,11 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         labelMain.text = masterViewController?.firstViewController.lblFirst.text
-         masterViewController?.changeView(newIndex: IndexView().FIRSTVIEW)
+        masterViewController?.changeView(newIndex: masterViewController?.lastIndex ?? 0)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+       
     }
     
     @IBAction func btnOne(_ sender: Any) {
@@ -26,8 +30,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func btnTwo(_ sender: Any) {
-         labelMain.text = masterViewController?.secondViewController.lblSecond.text
-         masterViewController?.changeView(newIndex: IndexView().SECONDVIEW)
+         performSegue(withIdentifier: "pushResult", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,6 +38,10 @@ class MainViewController: UIViewController {
             let vc = segue.destination as! MasterViewController
             masterViewController = vc
             masterViewController?.mainViewController = self
+        }
+        if segue.identifier == "pushResult" {
+            let vc = segue.destination as! ResultsViewController
+            vc.textResult = masterViewController?.TextString ?? ""
         }
     }
 }
