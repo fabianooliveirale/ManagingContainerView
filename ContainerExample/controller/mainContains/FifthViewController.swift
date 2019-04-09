@@ -1,17 +1,17 @@
 //
-//  ThirdViewController.swift
+//  FifthViewController.swift
 //  ContainerExample
 //
-//  Created by Fabiano Oliveira on 02/04/2019.
+//  Created by Fabiano Oliveira on 08/04/2019.
 //  Copyright © 2019 Fabiano Oliveira. All rights reserved.
 //
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class FifthViewController: UIViewController {
 
-    @IBOutlet weak var lblThird: UILabel!
     @IBOutlet weak var textFull: UILabel!
+    @IBOutlet weak var lblFifth: UILabel!
     
     var masterViewController: MasterViewController?
     
@@ -23,18 +23,18 @@ class ThirdViewController: UIViewController {
         textFull.text = masterViewController?.TextString
     }
     
-    @IBAction func btnClose(_ sender: Any) {
-            masterViewController!.mainViewController?.labelMain.text = masterViewController?.secondViewController.lblSecond.text
-            masterViewController?.changeView(newIndex: IndexView().SECONDVIEW)
+    @IBAction func btnVoltar(_ sender: Any) {
+        masterViewController!.mainViewController?.labelMain.text = masterViewController?.fourthViewController.lblFourth.text
+        masterViewController?.changeView(newIndex: IndexView().FOURTHVIEW)
     }
-    
     @IBAction func btnSixth(_ sender: Any) {
         masterViewController!.mainViewController?.labelMain.text = masterViewController?.sixthViewController.lblSixth.text
         masterViewController?.changeView(newIndex: IndexView().SIXTHVIEW)
     }
     @IBAction func btnPress(_ sender: Any) {
-        masterViewController?.TextString += lblThird.text! + ", "
+        masterViewController?.TextString += lblFifth.text! + ", "
         
         textFull.text = masterViewController?.TextString
     }
+    
 }

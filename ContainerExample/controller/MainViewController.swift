@@ -12,25 +12,22 @@ class MainViewController: UIViewController {
     
     var masterViewController: MasterViewController?
     
-    let FIRSTVIEW: Int = 0
-    let SECONDVIEW: Int = 1
-    
     @IBOutlet weak var labelMain: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         labelMain.text = masterViewController?.firstViewController.lblFirst.text
-         masterViewController?.refreshView(newIndex: FIRSTVIEW)
+         masterViewController?.changeView(newIndex: IndexView().FIRSTVIEW)
     }
     
     @IBAction func btnOne(_ sender: Any) {
         labelMain.text = masterViewController?.firstViewController.lblFirst.text
-        masterViewController?.refreshView(newIndex: FIRSTVIEW)
+        masterViewController?.changeView(newIndex: IndexView().FIRSTVIEW)
     }
     
     @IBAction func btnTwo(_ sender: Any) {
          labelMain.text = masterViewController?.secondViewController.lblSecond.text
-         masterViewController?.refreshView(newIndex: SECONDVIEW)
+         masterViewController?.changeView(newIndex: IndexView().SECONDVIEW)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

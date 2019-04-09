@@ -10,24 +10,30 @@ import UIKit
 
 class FourthViewController: UIViewController {
 
+    @IBOutlet weak var lblFourth: UILabel!
+    @IBOutlet weak var textFull: UILabel!
+    
+    var masterViewController: MasterViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        textFull.text = masterViewController?.TextString
+    }
 
     @IBAction func btnClose(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+          masterViewController!.mainViewController?.labelMain.text = masterViewController?.firstViewController.lblFirst.text
+        masterViewController?.changeView(newIndex: IndexView().FIRSTVIEW)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func btnFifth(_ sender: Any) {
+        masterViewController!.mainViewController?.labelMain.text = masterViewController?.fifthViewController.lblFifth.text
+        masterViewController?.changeView(newIndex: IndexView().FIFTHVIEW)
     }
-    */
-
+    @IBAction func btnPress(_ sender: Any) {
+        masterViewController?.TextString += lblFourth.text! + ", "
+        
+        textFull.text = masterViewController?.TextString
+    }
 }

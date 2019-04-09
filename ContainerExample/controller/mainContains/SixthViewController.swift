@@ -1,40 +1,38 @@
 //
-//  SessionViewController.swift
+//  SixthViewController.swift
 //  ContainerExample
 //
-//  Created by Fabiano Oliveira on 02/04/2019.
+//  Created by Fabiano Oliveira on 08/04/2019.
 //  Copyright © 2019 Fabiano Oliveira. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SixthViewController: UIViewController {
 
-    @IBOutlet weak var lblSecond: UILabel!
-    @IBOutlet weak var textFull: UILabel!
-    
     var masterViewController: MasterViewController?
+    @IBOutlet weak var textFull: UILabel!
+    @IBOutlet weak var lblSixth: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-         textFull.text = masterViewController?.TextString
+        textFull.text = masterViewController?.TextString
     }
     
     @IBAction func btnThird(_ sender: Any) {
         masterViewController!.mainViewController?.labelMain.text = masterViewController?.thirdViewController.lblThird.text
         masterViewController?.changeView(newIndex: IndexView().THIRDVIEW)
     }
-    
-    @IBAction func btnFirst(_ sender: Any) {
-        masterViewController!.mainViewController?.labelMain.text = masterViewController?.firstViewController.lblFirst.text
-        masterViewController?.changeView(newIndex: IndexView().FIRSTVIEW)
+    @IBAction func btnVoltar(_ sender: Any) {
+            masterViewController!.mainViewController?.labelMain.text = masterViewController?.fifthViewController.lblFifth.text
+            
+            masterViewController?.changeView(newIndex: IndexView().FIFTHVIEW)
     }
     @IBAction func btnPress(_ sender: Any) {
-        masterViewController?.TextString += lblSecond.text! + ", "
+        masterViewController?.TextString += lblSixth.text! + ", "
         
         textFull.text = masterViewController?.TextString
     }
