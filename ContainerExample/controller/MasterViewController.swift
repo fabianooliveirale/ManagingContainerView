@@ -149,7 +149,7 @@ class MasterViewController: UIViewController {
         
         // Configure Child View
         viewController.view.frame = view.bounds
-        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight] 
         
         // Notify Child View Controller
         viewController.didMove(toParent: self)
