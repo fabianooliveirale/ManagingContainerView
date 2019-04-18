@@ -18,6 +18,7 @@
 		9C46F8C522544574001798A5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C46F8C422544574001798A5 /* MainViewController.swift */; };
 		9C46F8C722544E55001798A5 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C46F8C622544E55001798A5 /* FourthViewController.swift */; };
 		9C46F8C922544E8B001798A5 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C46F8C822544E8B001798A5 /* ThirdViewController.swift */; };
+		9C561D0E226806E30091044F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C561D0D226806E30091044F /* BaseViewController.swift */; };
 		9CB8750D225C260000B79560 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8750C225C260000B79560 /* Extensions.swift */; };
 		9CB8750F225C2E2D00B79560 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8750E225C2E2D00B79560 /* FifthViewController.swift */; };
 		9CB87511225C2E4600B79560 /* SixthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB87510225C2E4600B79560 /* SixthViewController.swift */; };
@@ -37,6 +38,7 @@
 		9C46F8C422544574001798A5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9C46F8C622544E55001798A5 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		9C46F8C822544E8B001798A5 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		9C561D0D226806E30091044F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9CB8750C225C260000B79560 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9CB8750E225C2E2D00B79560 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 		9CB87510225C2E4600B79560 /* SixthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				9CB8750C225C260000B79560 /* Extensions.swift */,
+				9C561D0D226806E30091044F /* BaseViewController.swift */,
 			);
 			path = Extra;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				9C46F8C32254390E001798A5 /* SecondViewController.swift in Sources */,
 				9C46F8C722544E55001798A5 /* FourthViewController.swift in Sources */,
 				9C46F8C922544E8B001798A5 /* ThirdViewController.swift in Sources */,
+				9C561D0E226806E30091044F /* BaseViewController.swift in Sources */,
 				9C46F8AE22543758001798A5 /* AppDelegate.swift in Sources */,
 				9C46F8C1225438FF001798A5 /* FirstViewController.swift in Sources */,
 				9C46F8C522544574001798A5 /* MainViewController.swift in Sources */,

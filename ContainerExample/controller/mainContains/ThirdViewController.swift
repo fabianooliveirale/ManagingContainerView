@@ -8,12 +8,10 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class ThirdViewController: BaseViewController {
 
     @IBOutlet weak var lblThird: UILabel!
     @IBOutlet weak var textFull: UILabel!
-    
-    var masterViewController: MasterViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()

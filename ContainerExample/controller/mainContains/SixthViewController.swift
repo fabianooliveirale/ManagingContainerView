@@ -8,9 +8,8 @@
 
 import UIKit
 
-class SixthViewController: UIViewController {
+class SixthViewController: BaseViewController {
 
-    var masterViewController: MasterViewController?
     @IBOutlet weak var textFull: UILabel!
     @IBOutlet weak var lblSixth: UILabel!
     

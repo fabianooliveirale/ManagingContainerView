@@ -8,9 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
-    
-    var masterViewController: MasterViewController?
+class MainViewController: BaseViewController{
     
     @IBOutlet weak var labelMain: UILabel!
     
@@ -21,7 +19,6 @@ class MainViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       
     }
     
     @IBAction func btnOne(_ sender: Any) {

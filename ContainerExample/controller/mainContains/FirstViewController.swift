@@ -8,18 +8,17 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class FirstViewController: BaseViewController {
 
     @IBOutlet weak var lblFirst: UILabel!
     @IBOutlet weak var textFull: UILabel!
-    
-    var masterViewController: MasterViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         textFull.text = masterViewController?.TextString
     }
     @IBAction func btnFourth(_ sender: Any) {

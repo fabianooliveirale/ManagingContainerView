@@ -8,16 +8,14 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: BaseViewController {
 
     @IBOutlet weak var lblSecond: UILabel!
     @IBOutlet weak var textFull: UILabel!
     
-    var masterViewController: MasterViewController?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //print(SleepViews().firstViewController.lblFirst)
     }
     
     override func viewWillAppear(_ animated: Bool) {

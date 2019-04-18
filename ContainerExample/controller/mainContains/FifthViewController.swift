@@ -8,12 +8,11 @@
 
 import UIKit
 
-class FifthViewController: UIViewController {
+class FifthViewController: BaseViewController {
 
     @IBOutlet weak var textFull: UILabel!
     @IBOutlet weak var lblFifth: UILabel!
-    
-    var masterViewController: MasterViewController?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

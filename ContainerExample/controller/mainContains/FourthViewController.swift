@@ -8,12 +8,10 @@
 
 import UIKit
 
-class FourthViewController: UIViewController {
+class FourthViewController: BaseViewController {
 
     @IBOutlet weak var lblFourth: UILabel!
     @IBOutlet weak var textFull: UILabel!
-    
-    var masterViewController: MasterViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()

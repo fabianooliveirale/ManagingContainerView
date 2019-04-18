@@ -14,7 +14,3 @@ extension UIViewController {
         var SIXTHVIEW = 5
     }
 }
-
-extension MasterViewController {
-   
-}
