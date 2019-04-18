@@ -9,7 +9,7 @@
 import UIKit
 
 class ThirdViewController: BaseViewController {
-
+    
     @IBOutlet weak var lblThird: UILabel!
     @IBOutlet weak var textFull: UILabel!
     
@@ -18,21 +18,21 @@ class ThirdViewController: BaseViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        textFull.text = masterViewController?.TextString
+        textFull.text = masterViewController.TextString
     }
     
     @IBAction func btnClose(_ sender: Any) {
-            masterViewController!.mainViewController?.labelMain.text = masterViewController?.secondViewController.lblSecond.text
-            masterViewController?.changeView(newIndex: IndexView().SECONDVIEW)
+        masterViewController.mainViewController?.labelMain.text = masterViewController.secondViewController.lblSecond.text
+        masterViewController.changeView(newViewController: masterViewController.secondViewController)
     }
     
     @IBAction func btnSixth(_ sender: Any) {
-        masterViewController!.mainViewController?.labelMain.text = masterViewController?.sixthViewController.lblSixth.text
-        masterViewController?.changeView(newIndex: IndexView().SIXTHVIEW)
+        masterViewController.mainViewController!.labelMain.text = masterViewController.sixthViewController.lblSixth.text
+        masterViewController.changeView(newViewController: masterViewController.sixthViewController)
     }
+    
     @IBAction func btnPress(_ sender: Any) {
-        masterViewController?.TextString += lblThird.text! + ", "
-        
-        textFull.text = masterViewController?.TextString
+        masterViewController.TextString += lblThird.text! + ", "
+        textFull.text = masterViewController.TextString
     }
 }
