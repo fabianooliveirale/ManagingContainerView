@@ -18,20 +18,21 @@ class FourthViewController: BaseViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        textFull.text = masterViewController?.TextString
+        textFull.text = masterViewController.TextString
     }
 
     @IBAction func btnClose(_ sender: Any) {
-          masterViewController!.mainViewController?.labelMain.text = masterViewController?.firstViewController.lblFirst.text
-        masterViewController?.changeView(newIndex: IndexView().FIRSTVIEW)
+        masterViewController.mainViewController?.labelMain.text = masterViewController.firstViewController.lblFirst.text
+        masterViewController.changeView(newViewController: masterViewController.firstViewController)
     }
+    
     @IBAction func btnFifth(_ sender: Any) {
-        masterViewController!.mainViewController?.labelMain.text = masterViewController?.fifthViewController.lblFifth.text
-        masterViewController?.changeView(newIndex: IndexView().FIFTHVIEW)
+        masterViewController.mainViewController?.labelMain.text = masterViewController.fifthViewController.lblFifth.text
+        masterViewController.changeView(newViewController: masterViewController.fifthViewController)
     }
+    
     @IBAction func btnPress(_ sender: Any) {
-        masterViewController?.TextString += lblFourth.text! + ", "
-        
-        textFull.text = masterViewController?.TextString
+        masterViewController.TextString += lblFourth.text! + ", "
+        textFull.text = masterViewController.TextString
     }
 }

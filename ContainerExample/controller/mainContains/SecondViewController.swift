@@ -15,25 +15,24 @@ class SecondViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //print(SleepViews().firstViewController.lblFirst)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-         textFull.text = masterViewController?.TextString
+        textFull.text = masterViewController.TextString
     }
     
     @IBAction func btnThird(_ sender: Any) {
-        masterViewController!.mainViewController?.labelMain.text = masterViewController?.thirdViewController.lblThird.text
-        masterViewController?.changeView(newIndex: IndexView().THIRDVIEW)
+        masterViewController.mainViewController?.labelMain.text = masterViewController.thirdViewController.lblThird.text
+        masterViewController.changeView(newViewController: masterViewController.thirdViewController)
     }
     
     @IBAction func btnFirst(_ sender: Any) {
-        masterViewController!.mainViewController?.labelMain.text = masterViewController?.firstViewController.lblFirst.text
-        masterViewController?.changeView(newIndex: IndexView().FIRSTVIEW)
+        masterViewController.mainViewController?.labelMain.text = masterViewController.firstViewController.lblFirst.text
+        masterViewController.changeView(newViewController: masterViewController.firstViewController)
     }
+    
     @IBAction func btnPress(_ sender: Any) {
-        masterViewController?.TextString += lblSecond.text! + ", "
-        
-        textFull.text = masterViewController?.TextString
+        masterViewController.TextString += lblSecond.text! + ", "
+        textFull.text = masterViewController.TextString
     }
 }

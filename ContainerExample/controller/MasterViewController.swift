@@ -12,10 +12,9 @@ class MasterViewController: UIViewController {
     
     var mainViewController: MainViewController?
     
-    private var oldIndex: Int = 0
+    private var oldViewController: UIViewController?
     
     var TextString:String = ""
-    var lastIndex: Int = IndexView().FIRSTVIEW
     
     lazy var firstViewController: FirstViewController = {
         // Load Storyboard
@@ -116,61 +115,29 @@ class MasterViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    func changeView(newIndex: Int) {
-        removeView(newIndex: newIndex)
+    func changeView(newViewController: UIViewController, animationIndex: Int = 0) {
+        if animationIndex == 0 {
+            remove(asChildViewController: oldViewController ?? newViewController)
+            add(asChildViewController: newViewController)
+            oldViewController = newViewController
+        }else{
+            animationView(newViewController: newViewController, index: animationIndex)
+        }
     }
     
-    private func removeView(newIndex: Int){
-        switch oldIndex {
-        case IndexView().FIRSTVIEW:
-            remove(asChildViewController: firstViewController)
-            break
-        case IndexView().SECONDVIEW:
-            remove(asChildViewController: secondViewController)
-            break
-        case IndexView().THIRDVIEW:
-            remove(asChildViewController: thirdViewController)
-            break
-        case IndexView().FOURTHVIEW:
-            remove(asChildViewController: fourthViewController)
-            break
-        case IndexView().FIFTHVIEW:
-            remove(asChildViewController: fifthViewController)
-            break
-        case IndexView().SIXTHVIEW:
-            remove(asChildViewController: sixthViewController)
+    func animationView(newViewController: UIViewController, index: Int){
+        switch index {
+        case BaseViewController().returnView:
+            UIView.animate(withDuration: 125.5, animations: {
+                print("animation")
+            }, completion: { complet in
+                print("complete")
+                self.changeView(newViewController: newViewController)
+            })
             break
         default:
-            print("Erro")
+            break
         }
-        addView(newIndex: newIndex)
-    }
-    
-    private func addView(newIndex: Int){
-        switch newIndex {
-        case IndexView().FIRSTVIEW:
-            add(asChildViewController: firstViewController)
-            break
-        case IndexView().SECONDVIEW:
-            add(asChildViewController: secondViewController)
-            break
-        case IndexView().THIRDVIEW:
-            add(asChildViewController: thirdViewController)
-            break
-        case IndexView().FOURTHVIEW:
-            add(asChildViewController: fourthViewController)
-            break
-        case IndexView().FIFTHVIEW:
-            add(asChildViewController: fifthViewController)
-            break
-        case IndexView().SIXTHVIEW:
-            add(asChildViewController: sixthViewController)
-            break
-        default:
-            print("Erro")
-        }
-        lastIndex = oldIndex
-        oldIndex = newIndex
     }
     
     private func add(asChildViewController viewController: UIViewController) {

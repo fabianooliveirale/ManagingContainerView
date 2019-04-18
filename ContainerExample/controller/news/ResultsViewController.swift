@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResultsViewController: UIViewController {
+class ResultsViewController: BaseViewController {
 
     @IBOutlet weak var lblResult: UILabel!
     
@@ -17,5 +17,7 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         lblResult.text = textResult
+        
+        print(masterViewController.fourthViewController.lblFourth.text!)
     }
 }

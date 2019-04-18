@@ -9,5 +9,6 @@
 import UIKit
 
 class BaseViewController: UIViewController{
-    var masterViewController: MasterViewController?
+    var masterViewController = MasterViewController()
+    let returnView: Int = 1
 }
