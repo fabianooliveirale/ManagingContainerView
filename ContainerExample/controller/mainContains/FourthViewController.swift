@@ -32,6 +32,7 @@ class FourthViewController: BaseViewController {
     }
     
     @IBAction func btnPress(_ sender: Any) {
+        masterViewController.secondViewController.lblSecond.text = "OLÁMUNDO"
         masterViewController.TextString += lblFourth.text! + ", "
         textFull.text = masterViewController.TextString
     }

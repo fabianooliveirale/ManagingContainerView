@@ -35,4 +35,7 @@ class SecondViewController: BaseViewController {
         masterViewController.TextString += lblSecond.text! + ", "
         textFull.text = masterViewController.TextString
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+    }
 }
