@@ -19,4 +19,9 @@ class ResultsViewController: BaseViewController {
         lblResult.text = textResult
         print(masterViewController.fourthViewController.lblFourth.text!)
     }
+    
+    @IBAction func newStoryButton(_ sender: Any) {
+        performSegue(withIdentifier: "pushNewStory", sender: nil)
+    }
+    
 }
