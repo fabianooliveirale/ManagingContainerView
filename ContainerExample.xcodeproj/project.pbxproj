@@ -27,6 +27,7 @@
 		9CE1964822A0B12F00EE052F /* TresNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1964722A0B12F00EE052F /* TresNewViewController.swift */; };
 		9CE1964A22A0B14B00EE052F /* QuatroNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1964922A0B14B00EE052F /* QuatroNewViewController.swift */; };
 		9CE1964C22A0B15F00EE052F /* NewModallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1964B22A0B15F00EE052F /* NewModallyViewController.swift */; };
+		9CE1965022A0BEB400EE052F /* exUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1964F22A0BEB400EE052F /* exUIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		9CE1964722A0B12F00EE052F /* TresNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TresNewViewController.swift; sourceTree = "<group>"; };
 		9CE1964922A0B14B00EE052F /* QuatroNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuatroNewViewController.swift; sourceTree = "<group>"; };
 		9CE1964B22A0B15F00EE052F /* NewModallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewModallyViewController.swift; sourceTree = "<group>"; };
+		9CE1964F22A0BEB400EE052F /* exUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exUIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				9C561D0D226806E30091044F /* BaseViewController.swift */,
+				9CE1964F22A0BEB400EE052F /* exUIViewController.swift */,
 			);
 			path = Extra;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				9C561D0E226806E30091044F /* BaseViewController.swift in Sources */,
 				9CE1964A22A0B14B00EE052F /* QuatroNewViewController.swift in Sources */,
 				9C46F8AE22543758001798A5 /* AppDelegate.swift in Sources */,
+				9CE1965022A0BEB400EE052F /* exUIViewController.swift in Sources */,
 				9C46F8C1225438FF001798A5 /* FirstViewController.swift in Sources */,
 				9C46F8C522544574001798A5 /* MainViewController.swift in Sources */,
 				9CB87511225C2E4600B79560 /* SixthViewController.swift in Sources */,

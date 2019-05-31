@@ -25,10 +25,6 @@ class UmNewViewController: BaseViewController {
         performSegue(withIdentifier: "pushQuatro", sender: nil)
     }
     @IBAction func modalButton(_ sender: Any) {
-        if let vc = self.storyboard?.instantiateViewController(withIdentifier:"newModal") {
-            vc.modalTransitionStyle   = .crossDissolve;
-            vc.modalPresentationStyle = .overCurrentContext
-            self.present(vc, animated: true, completion: nil)
-        }
+        self.openModal(view: self, modalId: "newModal")
     }
 }
