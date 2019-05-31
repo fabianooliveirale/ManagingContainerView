@@ -21,6 +21,12 @@
 		9C561D0E226806E30091044F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C561D0D226806E30091044F /* BaseViewController.swift */; };
 		9CB8750F225C2E2D00B79560 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8750E225C2E2D00B79560 /* FifthViewController.swift */; };
 		9CB87511225C2E4600B79560 /* SixthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB87510225C2E4600B79560 /* SixthViewController.swift */; };
+		9CE1964022A0B06700EE052F /* NewStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE1963F22A0B06700EE052F /* NewStory.storyboard */; };
+		9CE1964422A0B11300EE052F /* UmNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1964322A0B11300EE052F /* UmNewViewController.swift */; };
+		9CE1964622A0B11F00EE052F /* DoisNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1964522A0B11F00EE052F /* DoisNewViewController.swift */; };
+		9CE1964822A0B12F00EE052F /* TresNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1964722A0B12F00EE052F /* TresNewViewController.swift */; };
+		9CE1964A22A0B14B00EE052F /* QuatroNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1964922A0B14B00EE052F /* QuatroNewViewController.swift */; };
+		9CE1964C22A0B15F00EE052F /* NewModallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1964B22A0B15F00EE052F /* NewModallyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,12 @@
 		9C561D0D226806E30091044F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9CB8750E225C2E2D00B79560 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 		9CB87510225C2E4600B79560 /* SixthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthViewController.swift; sourceTree = "<group>"; };
+		9CE1963F22A0B06700EE052F /* NewStory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewStory.storyboard; sourceTree = "<group>"; };
+		9CE1964322A0B11300EE052F /* UmNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmNewViewController.swift; sourceTree = "<group>"; };
+		9CE1964522A0B11F00EE052F /* DoisNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoisNewViewController.swift; sourceTree = "<group>"; };
+		9CE1964722A0B12F00EE052F /* TresNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TresNewViewController.swift; sourceTree = "<group>"; };
+		9CE1964922A0B14B00EE052F /* QuatroNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuatroNewViewController.swift; sourceTree = "<group>"; };
+		9CE1964B22A0B15F00EE052F /* NewModallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewModallyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +92,7 @@
 		9C46F8AC22543758001798A5 /* ContainerExample */ = {
 			isa = PBXGroup;
 			children = (
+				9CE1964122A0B0EB00EE052F /* NewStory */,
 				9CB8750B225C25F000B79560 /* Extra */,
 				9C46F8BF225438C9001798A5 /* controller */,
 				9C46F8AD22543758001798A5 /* AppDelegate.swift */,
@@ -121,6 +134,27 @@
 				9C561D0D226806E30091044F /* BaseViewController.swift */,
 			);
 			path = Extra;
+			sourceTree = "<group>";
+		};
+		9CE1964122A0B0EB00EE052F /* NewStory */ = {
+			isa = PBXGroup;
+			children = (
+				9CE1964222A0B10200EE052F /* Controller */,
+				9CE1963F22A0B06700EE052F /* NewStory.storyboard */,
+			);
+			path = NewStory;
+			sourceTree = "<group>";
+		};
+		9CE1964222A0B10200EE052F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9CE1964322A0B11300EE052F /* UmNewViewController.swift */,
+				9CE1964522A0B11F00EE052F /* DoisNewViewController.swift */,
+				9CE1964722A0B12F00EE052F /* TresNewViewController.swift */,
+				9CE1964922A0B14B00EE052F /* QuatroNewViewController.swift */,
+				9CE1964B22A0B15F00EE052F /* NewModallyViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C46F8B82254375A001798A5 /* LaunchScreen.storyboard in Resources */,
+				9CE1964022A0B06700EE052F /* NewStory.storyboard in Resources */,
 				9C46F8B52254375A001798A5 /* Assets.xcassets in Resources */,
 				9C46F8B322543758001798A5 /* Main.storyboard in Resources */,
 			);
@@ -194,13 +229,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CE1964622A0B11F00EE052F /* DoisNewViewController.swift in Sources */,
 				9C07E7BB225C410B00C36099 /* ResultsViewController.swift in Sources */,
 				9CB8750F225C2E2D00B79560 /* FifthViewController.swift in Sources */,
+				9CE1964822A0B12F00EE052F /* TresNewViewController.swift in Sources */,
+				9CE1964C22A0B15F00EE052F /* NewModallyViewController.swift in Sources */,
 				9C46F8B022543758001798A5 /* MasterViewController.swift in Sources */,
+				9CE1964422A0B11300EE052F /* UmNewViewController.swift in Sources */,
 				9C46F8C32254390E001798A5 /* SecondViewController.swift in Sources */,
 				9C46F8C722544E55001798A5 /* FourthViewController.swift in Sources */,
 				9C46F8C922544E8B001798A5 /* ThirdViewController.swift in Sources */,
 				9C561D0E226806E30091044F /* BaseViewController.swift in Sources */,
+				9CE1964A22A0B14B00EE052F /* QuatroNewViewController.swift in Sources */,
 				9C46F8AE22543758001798A5 /* AppDelegate.swift in Sources */,
 				9C46F8C1225438FF001798A5 /* FirstViewController.swift in Sources */,
 				9C46F8C522544574001798A5 /* MainViewController.swift in Sources */,

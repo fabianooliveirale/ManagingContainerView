@@ -679,11 +679,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaQ-8W-k8P">
+                                <rect key="frame" x="16" y="80" width="90" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="RYu-FG-uba"/>
+                                    <constraint firstAttribute="width" constant="90" id="qND-3c-hji"/>
+                                </constraints>
+                                <state key="normal" title="New Story">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="newStoryButton:" destination="Dr7-3V-trq" eventType="touchUpInside" id="Q3o-3v-EUb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BOB-M3-oMl" firstAttribute="top" secondItem="NfG-px-5hk" secondAttribute="top" constant="16" id="9jr-8W-Iby"/>
+                            <constraint firstItem="SaQ-8W-k8P" firstAttribute="leading" secondItem="NfG-px-5hk" secondAttribute="leading" constant="16" id="CC8-4l-RvW"/>
                             <constraint firstItem="NfG-px-5hk" firstAttribute="trailing" secondItem="BOB-M3-oMl" secondAttribute="trailing" constant="16" id="FuE-PO-bZb"/>
+                            <constraint firstItem="SaQ-8W-k8P" firstAttribute="top" secondItem="NfG-px-5hk" secondAttribute="top" constant="16" id="cer-pd-UZS"/>
                             <constraint firstItem="BOB-M3-oMl" firstAttribute="leading" secondItem="NfG-px-5hk" secondAttribute="leading" constant="16" id="jAH-bC-SyR"/>
                             <constraint firstItem="NfG-px-5hk" firstAttribute="bottom" secondItem="BOB-M3-oMl" secondAttribute="bottom" constant="16" id="khA-ZU-8dy"/>
                         </constraints>
@@ -691,11 +708,20 @@
                     </view>
                     <connections>
                         <outlet property="lblResult" destination="BOB-M3-oMl" id="lX4-ny-d1u"/>
+                        <segue destination="zhL-N7-WSs" kind="show" identifier="pushNewStory" id="fPu-P5-zF3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mz9-TJ-c2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1844" y="-1120"/>
+        </scene>
+        <!--UmNewViewController-->
+        <scene sceneID="DiP-Og-YjB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewStory" referencedIdentifier="UmNewViewController" id="zhL-N7-WSs" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c2b-0G-TGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2607" y="-1121"/>
         </scene>
     </scenes>
     <resources>
